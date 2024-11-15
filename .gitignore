@@ -1,0 +1,9 @@
+.vscode
+.idea
+
+.env
+errors.log
+db.sql
+
+vendor
+composer.lock

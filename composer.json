@@ -1,0 +1,29 @@
+{
+    "name": "oscurlo/inventory-management-system",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Esteban Serna Palacios",
+            "email": "esteban.serna.p@gmail.com"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap-icons": "^1.11",
+        "vlucas/phpdotenv": "^5.6",
+        "oscurlo/component-renderer": "^1.1",
+        "phpmailer/phpmailer": "^6.9",
+        "components/jquery": "^3.7",
+        "almasaeed2010/adminlte": "^3.2",
+        "cboden/ratchet": "^0.4.4",
+        "datatables.net/datatables.net-bs5": "^2.1",
+        "datatables.net/datatables.net-buttons-bs5": "^3.1",
+        "datatables.net/datatables.net-responsive-bs5": "^3.0",
+        "datatables.net/datatables.net-select-bs5": "^2.1",
+        "ext-openssl": "*",
+        "ext-pdo": "*"
+    }
+}

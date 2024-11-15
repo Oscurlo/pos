@@ -1,0 +1,35 @@
+<?php declare(strict_types=1);
+
+use Src\Abstract\Script;
+use Src\Scripts\Component;
+use Src\Scripts\View;
+
+include_once "./vendor/autoload.php";
+
+[$system, $command, $action] = $argv;
+
+$printColor = fn(string $string, string $color = "WHITE") => Script::COLOR[$color] . $string . Script::COLOR["RESET"];
+
+Script::println(str_pad(PHP_EOL, 100, "-", STR_PAD_LEFT));
+switch (true) {
+    case Script::match($command, "create:view") | Script::match($command, "make:view"):
+        View::createView($action);
+        break;
+
+    case Script::match($command, "remove:view") | Script::match($command, "delete:view"):
+        View::removeView($action);
+        break;
+
+    case Script::match($command, "create:component") | Script::match($command, "make:component"):
+        Component::createComponent($action);
+        break;
+
+    case Script::match($command, "remove:component") | Script::match($command, "delete:component"):
+        Component::removeComponent($action);
+        break;
+
+    default:
+        Script::println($printColor("Command not found: \"{$command}\"", "RED"));
+        break;
+}
+Script::println(str_pad(PHP_EOL, 100, "-", STR_PAD_RIGHT));
